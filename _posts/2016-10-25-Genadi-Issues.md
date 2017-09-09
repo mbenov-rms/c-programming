@@ -2,6 +2,8 @@
 layout: single
 title: Проблеми с GitHub и Генади
 category: новини
+tags:
+  - домашни
 date: 2016-10-25 12:40:00
 ---
 

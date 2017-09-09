@@ -1,10 +1,13 @@
 ---
 layout: single
-title: Конспект за теория и практика 
+title: Конспект за теория и практика
 category: новини
+tags:
+  - изпитвания
+  - материал
 ---
 
 Това е конспекта за първи и втори срок. Дадени са примерни въпроса по отделните теми.
 Като минимум е хубаво да знаете отговорите на удебелените въпроси по конкретните теми.
 
-[Конспект](https://docs.google.com/document/d/1didzStTyA1Gd0H7GI0LHA_4XH8Rju5fDt4IKNWYGwNQ/edit#) 
+[Конспект](https://docs.google.com/document/d/1didzStTyA1Gd0H7GI0LHA_4XH8Rju5fDt4IKNWYGwNQ/edit#)

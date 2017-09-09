@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Консултация за поправката
+title: Консултация за юлска поправката
 categories:
   - часове
 tags:
