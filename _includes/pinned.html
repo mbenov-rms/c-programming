@@ -3,7 +3,7 @@
 {% assign actual_pinned_post = '' | split: ',' %}
 
 {% for post in pinned_posts %}
-{% capture pinnedDate %}{{ post.date | plus: site.pinned_period | date: '%s'}}{% endcapture %}
+{% capture pinnedDate %}{{ post.date | date: '%s' | plus: site.pinned_period }}{% endcapture %}
   {%if currentDate <= pinnedDate %}
     {% assign is_there_pinned = true %}
     {% assign actual_pinned_post = actual_pinned_post | push: post %}
