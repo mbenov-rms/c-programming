@@ -11,7 +11,7 @@ title                    : "Програмиране на C"
 title_separator          : "|"
 name                     : &name "ТУЕС (ELSYS)"
 description              : &description "Страница на курса по програмиране на C за 10 клас"
-url                      : https://elsys.github.io/c-programming
+url                      : https://elsys.github.io
 baseurl                  : "/c-programming"
 repository               : "elsys/c-programming"
 
