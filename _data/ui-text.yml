@@ -49,6 +49,46 @@ en-GB:
 en-AU:
   <<: *DEFAULT_EN
 
+bg-BG: &DEFAULT_BG
+  page                       : "Страница"
+  pagination_previous        : "Предишна"
+  pagination_next            : "Следваща"
+  breadcrumb_home_label      : "Начало"
+  breadcrumb_separator       : "/"
+  menu_label                 : "Меню"
+  toc_label                  : "На тази страница"
+  ext_link_label             : "Директен линк"
+  less_than                  : "под малко от"
+  minute_read                : "минути за четене"
+  share_on_label             : "Сподели по"
+  meta_label                 :
+  tags_label                 : "Тагове:"
+  categories_label           : "Категории:"
+  date_label                 : "Обновена:"
+  comments_label             : "Остави коментар"
+  comments_title             : "Коментари"
+  more_label                 : "Прочети още"
+  related_label              : "Също така може да погледнеш"
+  follow_label               : "Последвай:"
+  feed_label                 : "Feed"
+  powered_by                 : "Захранвано с помощта на"
+  website_label              : "Официална страница"
+  email_label                : "Имейл"
+  recent_posts               : "Последни новини"
+  pinned_posts               : "Важни новини" # custom
+  undefined_wpm              : "Undefined parameter words_per_minute at _config.yml"
+  comment_form_info          : "Your email address will not be published. Required fields are marked"
+  comment_form_comment_label : "Comment"
+  comment_form_md_info       : "Markdown is supported."
+  comment_form_name_label    : "Name"
+  comment_form_email_label   : "Email address"
+  comment_form_website_label : "Website (optional)"
+  comment_btn_submit         : "Submit Comment"
+  comment_btn_submitted      : "Submitted"
+  comment_success_msg        : "Thanks for your comment! It will show on the site once it has been approved."
+  comment_error_msg          : "Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again."
+  loading_label              : "Зареждане..."
+
 # Spanish
 # --------------
 es: &DEFAULT_ES

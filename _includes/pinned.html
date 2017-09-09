@@ -1,0 +1,22 @@
+{% capture currentDate %}{{ 'now' | date: '%s'}}{% endcapture %}
+{% assign pinned_posts = site.posts | where:"pinned", true %}
+{% assign actual_pinned_post = '' | split: ',' %}
+
+{% for post in pinned_posts %}
+{% capture pinnedDate %}{{ post.date | plus: site.pinned_period | date: '%s'}}{% endcapture %}
+  {%if currentDate <= pinnedDate %}
+    {% assign is_there_pinned = true %}
+    {% assign actual_pinned_post = actual_pinned_post | push: post %}
+  {% endif %}
+{% endfor %}
+
+{% if is_there_pinned %}
+<h3 class="archive__subtitle pinned" >{{ site.data.ui-text[site.locale].pinned_posts | default: "Pinned Posts" }}</h3>
+
+{% for post in actual_pinned_post %}
+    {% include archive-single.html %}
+{% endfor %}
+
+{% endif %}
+
+</br>

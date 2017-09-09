@@ -2,6 +2,16 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+th {
+    background-color: #E91D5A;
+    color: white;
+}
+
 @charset "utf-8";
 
 @import "minimal-mistakes";
+
+.archive__subtitle.pinned {
+  @extend .archive__subtitle;
+  color: #E91D5A !important;
+}
