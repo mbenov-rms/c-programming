@@ -1,17 +1,28 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-
-th {
-    background-color: #E91D5A;
-    color: white;
-}
-
 @charset "utf-8";
 
-@import "minimal-mistakes";
+$primary-color: #4B79B8;
+$muted-text-color: #4B79B8;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
 
 .archive__subtitle.pinned {
   @extend .archive__subtitle;
-  color: #E91D5A !important;
+  color: $primary-color !important;
+}
+
+th {
+    background-color: $primary-color;
+    color: white;
+}
+
+.colorful {
+  color: $primary-color !important;
+}
+
+ul.visible-links > li.masthead__menu-item:first-child > a {
+    color: $primary-color !important;
 }

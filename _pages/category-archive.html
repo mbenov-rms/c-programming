@@ -9,7 +9,7 @@ sidebar:
 {% include group-by-array collection=site.posts field="categories" %}
 
 {% for category in group_names %}
-  <a href="#{{ category | slugify }}" style="color: #E91D5A;"> {{ category }} </a> &nbsp;&nbsp;
+  <a href="#{{ category | slugify }}" class="colorful"> {{ category }} </a> &nbsp;&nbsp;
 {% endfor %}
 
 </br>

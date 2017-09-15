@@ -9,7 +9,7 @@ sidebar:
 {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
 
 {% for year in postsByYear %}
-  <a href="#{{ year.name | slugify }}" style="color: #E91D5A; text-decoration: none;"> {{ year.name }} </a> &nbsp;&nbsp;
+  <a href="#{{ year.name | slugify }}" class="colorful"> {{ year.name }} </a> &nbsp;&nbsp;
 {% endfor %}
 
 </br>
