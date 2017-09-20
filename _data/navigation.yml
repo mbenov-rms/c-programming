@@ -15,3 +15,17 @@ archive:
         url: /categories/
       - title: "По тагове"
         url: /tags/
+  - title: За курса
+    children:
+      - title: "Тази година"
+        url: /about/years/2017-2018
+      - title: "През всички години"
+        url: /about/years/
+
+years:
+  - title: За курса
+    children:
+      - title: "Тази година"
+        url: /about/years/2017-2018
+      - title: "През всички години"
+        url: /about/years/

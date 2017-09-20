@@ -1,0 +1,11 @@
+---
+layout: archive
+title: "Предишни години"
+permalink: about/years/
+---
+
+<div class="grid__wrapper">
+  {% for post in site.years %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>

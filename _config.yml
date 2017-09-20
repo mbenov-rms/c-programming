@@ -122,6 +122,11 @@ tag_archive:
   type: liquid
   path: /tags/
 
+collections:
+  years:
+    output: true
+    permalink: about/:collection/:path/
+
 compress_html:
   clippings: all
   ignore:
@@ -136,6 +141,14 @@ defaults:
     values:
       layout: single
       author_profile: true
+      share: true
+      related: true
+  # _years
+  - scope:
+      path: ""
+      type: years
+    values:
+      layout: single
       share: true
 
 pinned_period: 604800
