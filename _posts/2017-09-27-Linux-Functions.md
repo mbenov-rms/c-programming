@@ -33,7 +33,7 @@ int main() {
     printf("is 25 odd = %d\n", is_odd(25));
     printf("is 0 odd = %d\n", is_odd(0));
 
-    int num1; // not initialized, just showing randomness
+    int num1; // not initialised, just showing randomness
     printf("is %d odd = %d\n",num1, is_odd(num1));
 
     return 0;
@@ -52,12 +52,48 @@ int is_odd(int number) {
 
 int is_even(int another_number) {
     // Short version
-    // return !is_odd(another_numer);
+    // return !is_odd(another_number);
 
     if (is_odd(another_number) == 0) {
         return 1;
     }
     return 0;
 
+}
+```
+
+```c
+// calc.c
+#include<stdio.h>
+
+int sum(int, int);
+int mul(int, int);
+
+int main() {
+    printf("3 + 5 = %d\n", sum(3, 5));
+    printf("6 + 12 = %d\n", sum(6, 12));
+    printf("0 + -5 = %d\n", sum(0, -5));
+
+    int arg1, arg2; // Not initialised, just showing randomness
+    printf("%d + %d = %d\n", arg1, arg2, sum(arg1, arg2));
+
+    int res = mul(5, 5);
+    int res2 = mul(5, 6);
+    printf("%d\n", res);
+    printf("%d\n", res2);
+
+    return 0;
+}
+
+int sum(int first, int second) {
+    return first + second;
+}
+
+int mul(int a, int b) {
+   int res = 0;
+   for(int i = 0; i < a /* or b */; ++i) {
+       res = sum(res, b);
+    }
+    return res;
 }
 ```
