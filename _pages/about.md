@@ -5,7 +5,7 @@ layout: single
 author_profile: true
 ---
 
-{% include toc icon="gears" title="За курса" %}
+{% include toc icon="graduation-cap" title="За курса" %}
 
 ## Програмиране за 10 клас
 

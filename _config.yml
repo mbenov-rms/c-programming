@@ -16,7 +16,7 @@ description              : &description "Страница на курса по �
 url                      : https://elsys.github.io
 baseurl                  : "/c-programming"
 repository               : "elsys/c-programming"
-
+search                   : true
 og_image                 : "/assets/images/logo.png"
 
 author:
