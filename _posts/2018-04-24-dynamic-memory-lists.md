@@ -3,7 +3,7 @@ title: Лекция 14 - Динамична памет/едносвързан с
 category: лекции
 ---
 A и Б клас
-[Линк към презентацията за списък](https://docs.google.com/presentation/d/1GHF7q_9JWd2tws8xe05e0C7wkm3VWdmG7AMDaq2_seo/edit)
+[Линк към презентацията за списък](https://docs.google.com/presentation/d/1akNB8yN82wpF_FbxIwPg8xvTnVV1nZIURuUYVWMAWI8/edit#slide=id.p)
 
 В и Г клас
 [Линк към презентацията за динамична памет](https://docs.google.com/presentation/d/1UY1PWQDPMwTYUTFyWVVwbn0irq1ZeGUnQvgidkFS7V0/edit#slide=id.p)
