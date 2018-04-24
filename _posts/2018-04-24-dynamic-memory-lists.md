@@ -8,10 +8,117 @@ A и Б клас
 В и Г клас
 [Линк към презентацията за динамична памет](https://docs.google.com/presentation/d/1UY1PWQDPMwTYUTFyWVVwbn0irq1ZeGUnQvgidkFS7V0/edit#slide=id.p)
 
-## Задачи от час А и Б
+## Задачи от час А
 
 ```c
 
+```
+
+## Задачи от час Б
+
+```c
+// main.c
+#include <stdio.h>
+#include "list.h"
+
+int main() {
+
+    struct list_t original = list_init(5);
+
+    insert_last(&original, 4);
+    insert_last(&original, 5);
+
+    struct list_t l = list_copy(original);
+
+    printf("%d %d %d\n", l.head->value, l.head->next->value, l.head->next->next->value);
+
+    list_destroy(&l);
+    list_destroy(&original);
+
+    return 0;
+}
+```
+
+```c
+// list.c
+#include "list.h"
+#include <stdlib.h>
+
+struct list_t list_init(int value) {
+    struct list_t l;
+
+    l.head = malloc(sizeof(struct node_t));
+
+    l.head->value = value;
+    l.head->next = NULL;
+
+    return l;
+}
+
+void list_destroy(struct list_t *l) {
+    struct node_t *current = l->head;
+    struct node_t *tmp = current->next;
+
+    while(current->next != NULL) {
+        free(current);
+        current = tmp;
+        tmp = tmp->next;
+    }
+
+    free(current);
+}
+
+struct list_t list_copy(struct list_t original) {
+    // check if list is empty
+
+    struct list_t copy = list_init(original.head->value);
+
+    struct node_t *current = original.head->next;
+
+    while(current != NULL) {
+        insert_last(&copy, current->value);
+        current = current->next;
+    }
+
+    return copy;
+}
+
+void insert_last(struct list_t *l, int value) {
+    struct node_t *new_node = malloc(sizeof(struct node_t));
+
+    new_node->value = value;
+    new_node->next = NULL;
+
+    struct node_t *last = l->head;
+
+    while(last->next != NULL) {
+        last = last->next;
+    }
+
+    last->next = new_node;
+}
+```
+
+```c
+// list.h
+#ifndef __LIST_H__
+#define __LIST_H__
+
+struct list_t {
+    struct node_t *head;
+};
+
+struct node_t {
+    int value;
+    struct node_t *next;
+};
+
+struct list_t list_init(int);
+void list_destroy(struct list_t*);
+struct list_t list_copy(struct list_t);
+
+void insert_last(struct list_t*, int);
+#endif
 ```
 
 ## Задачи от час В и Г
