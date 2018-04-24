@@ -193,3 +193,39 @@ int print_sequence(int *start, int *end) {
     return count;
 }
 ```
+
+```c
+#include <stdio.h>
+
+void get_min_max(int*, int*, int*, int);
+
+int main() {
+
+    int min;
+    int max;
+    int arr[] = {1, 2, 3, 4, 5};
+
+    get_min_max(arr, &min, &max, 5);
+
+    printf("%d %d\n", min, max);
+
+    return 0;
+}
+
+void get_min_max(int *arr, int *min, int *max, int size) {
+    if (size <= 0) { return; }
+
+    *min = arr[0];
+    *max = arr[0];
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i] < *min) {
+            *min = arr[i];
+        }
+
+        if (arr[i] > *max) {
+            *max = arr[i];
+        }
+    }
+}
+```
