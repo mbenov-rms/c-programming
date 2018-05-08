@@ -11,7 +11,56 @@ A и Б клас
 ## Задачи от час А
 
 ```c
+#include "list.h"
+#include <stdio.h>
+#include <stdlib.h>
 
+struct node_t init_list ()
+{
+  struct node_t head;
+
+  head.next = NULL;
+
+  return head;
+}
+
+void destroy_list (struct node_t head)
+{
+  struct node_t *temp = &head;
+  struct node_t *del = head.next;
+
+  while (temp->next != NULL)
+    {
+      temp = del->next;
+      free (del);
+      del = temp;
+    }
+  free (del);
+}
+
+int size (struct node_t head)
+{
+  int size = 0;
+  struct node_t *temp = head.next;
+
+  if (temp == NULL)
+    {
+      return 0;
+    }
+
+  while (temp->next != NULL)
+    {
+      temp = temp->next;
+      ++size;
+    }
+
+  return size;
+}
+
+int empty (struct node_t head)
+{
+  return size (head) == 0;
+}
 ```
 
 ## Задачи от час Б
