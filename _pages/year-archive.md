@@ -1,6 +1,7 @@
 ---
-title: "Posts by Year"
+title: "Новини по години"
 permalink: /year-archive/
 layout: posts
-author_profile: true
+sidebar:
+  nav: "archive"
 ---
