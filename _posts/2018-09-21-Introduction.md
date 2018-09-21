@@ -20,7 +20,7 @@ tags:
 Моля попълнете формичката(след като имате идея кои номера сте) и се опитайте в рамките на следващата седмица да инсталирате линукс. Долу можете да намерите полезни линкове.
 
 0. [Записване за курса, като попълните следната Google Form (задължително)](https://goo.gl/forms/Em69kTr8yDDBMMZv2)
-0. [Инсталиране на някоя линукс дистрибуция (била тя вирутална или dual boot)](https://elsys.gitbooks.io/survival-guide/content/11-linux.html#helpful-links)
+0. [Инсталиране на някоя линукс дистрибуция (била тя вирутална или dual boot)](https://elsys.gitbooks.io/survival-guide/content/course-introduction/linux.html)
 
 ## Полезни линкове:
 
