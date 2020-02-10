@@ -7,7 +7,7 @@ tags:
 ---
 [Линк към презентацията](https://drive.google.com/open?id=1Ul5qXQRbLzZPJ4Up2c2FdFsyaQ1JBkJ-bo2YUaqUBQw)
 
-{% include presentation id="2PACX-1vRmh4vFVr4aw8l4n2-d9W6bZ7Ns2s0TZ4xDxjICTkbE6W6So7oZx-ogadcPlbn6CZs6wpYXWr2pYn_a/" %}
+{% include presentation id="2PACX-1vRmh4vFVr4aw8l4n2-d9W6bZ7Ns2s0TZ4xDxjICTkbE6W6So7oZx-ogadcPlbn6CZs6wpYXWr2pYn_a" %}
 
 ## А клас
 ```c
