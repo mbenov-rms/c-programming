@@ -8,14 +8,6 @@ tags:
 
 ## А клас
 ```c
-```
-
-## Б клас
-```c
-```
-
-## В клас
-```c
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -49,7 +41,7 @@ insert(struct list_t* list, int val)
   while(curr->next != NULL) {
     curr = curr->next;
   }
-  
+
   curr->next = new_node;
   list->size++;
 }
@@ -159,4 +151,12 @@ struct node_t* found=get(&list1,65);
   //print_list(&list1);
   return 0;
 }
+```
+
+## Б клас
+```c
+```
+
+## В клас
+```c
 ```
