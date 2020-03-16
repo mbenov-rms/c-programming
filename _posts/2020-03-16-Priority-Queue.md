@@ -45,17 +45,18 @@ struct node_t* push(struct node_t* queue, int size, struct node_t new_node) {
 
 void print_queue(struct node_t* queue, int size) {
   for(int i=0; i<size; i++) {
-    printf("[%d] value=%d priority=%d\n", i, queue[i].value, queue[i].priority);
+    printf("[%d] value=%d priority=%c\n", i, queue[i].value, queue[i].priority);
   }
 }
 
 int main() {
   struct node_t* queue = NULL;
 
-  struct node_t node1 = {10, 2};
-  struct node_t node2 = {20, 1};
-  struct node_t node3 = {30, 4};
-  struct node_t node4 = {30, 1};
+  struct node_t node1 = {10, 'b'};
+  struct node_t node2 = {20, 'a'};
+  struct node_t node3 = {30, 'c'};
+  struct node_t node4 = {30, 'a'};
+  struct node_t node5 = {10, 'a'};
 
   int size = 0;
 
@@ -63,6 +64,7 @@ int main() {
   queue = push(queue, size++, node2);
   queue = push(queue, size++, node3);
   queue = push(queue, size++, node4);
+  queue = push(queue, size++, node5);
 
   print_queue(queue, size);
 
@@ -98,35 +100,19 @@ void push(struct queue_t* queue, struct node_t* new_node) {
       queue->head = new_node;
     } else {
       struct node_t* curr = queue->head;
-      printf("new_node(%d)\n", new_node->priority);
-      while(curr->priority < new_node->priority && curr->next != NULL) {
+      //printf("new_node(%d)\n", new_node->priority);
+      while(curr->next != NULL && curr->next->priority < new_node->priority ) {
         curr = curr->next;
       }
-      printf("curr(%d,%p)\n", curr->priority, curr->next);
+      //printf("curr(%d,%p)\n", curr->priority, curr->next);
 
       new_node->next = curr->next;
       curr->next = new_node;
-      /*if(curr->next == NULL) {
-        curr->next = new_node;
-        new_node->next = NULL;
-      } else {
-        new_node->next = curr->next;
-        curr->next = new_node;
-      }*/
-     // if(curr->next != NULL) {
 
-      /*} else {
-        curr->next = new_node;
-        new_node->next = NULL;
-      }*/
-    }
-    /*struct node_t* curr = queue->head;
-    while(curr->next != NULL) {
-      curr = curr->next;
+      new_node->next = NULL;
+      curr->next = new_node;
     }
 
-    curr->next = new_node;
-    new_node->next = NULL;*/
     queue->size++;
   }
 }
