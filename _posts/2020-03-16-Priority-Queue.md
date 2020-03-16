@@ -69,3 +69,93 @@ int main() {
   return 0;
 }
 ```
+## В клас
+```c
+#include <stdlib.h>
+#include <stdio.h>
+
+struct node_t {
+  int value;
+  struct node_t* next;
+  int priority;
+};
+
+struct queue_t {
+  struct node_t* head;
+  int size;
+};
+// 2 - 4 - 1 - 3 - 1
+void push(struct queue_t* queue, struct node_t* new_node) {
+  if(queue->head == NULL) {
+//if(queue->size == 0) {
+    queue->head = new_node;
+    new_node->next = NULL;
+    queue->size = 1;
+    //return;
+  } else {
+    if(queue->head->priority > new_node->priority) {
+      new_node->next = queue->head;
+      queue->head = new_node;
+    } else {
+      struct node_t* curr = queue->head;
+      printf("new_node(%d)\n", new_node->priority);
+      while(curr->priority < new_node->priority && curr->next != NULL) {
+        curr = curr->next;
+      }
+      printf("curr(%d,%p)\n", curr->priority, curr->next);
+
+      new_node->next = curr->next;
+      curr->next = new_node;
+      /*if(curr->next == NULL) {
+        curr->next = new_node;
+        new_node->next = NULL;
+      } else {
+        new_node->next = curr->next;
+        curr->next = new_node;
+      }*/
+     // if(curr->next != NULL) {
+
+      /*} else {
+        curr->next = new_node;
+        new_node->next = NULL;
+      }*/
+    }
+    /*struct node_t* curr = queue->head;
+    while(curr->next != NULL) {
+      curr = curr->next;
+    }
+
+    curr->next = new_node;
+    new_node->next = NULL;*/
+    queue->size++;
+  }
+}
+
+void print_queue(struct queue_t* queue) {
+  struct node_t* curr = queue->head;
+  while(curr != NULL) {
+    printf("[%p] value=%d priority=%d next=%p\n", curr, curr->value, curr->priority, curr->next);
+    curr = curr->next;
+  }
+}
+
+int main() {
+  struct queue_t queue = {NULL, 0};
+
+  struct node_t node1 = {10, NULL, 2};
+  struct node_t node2 = {40, NULL, 1};
+  struct node_t node3 = {30, NULL, 3};
+  struct node_t node4 = {20, NULL, 1};
+  struct node_t node5 = {70, NULL, 4};
+
+  push(&queue, &node1);
+  push(&queue, &node5);
+  push(&queue, &node2);
+  push(&queue, &node3);
+  push(&queue, &node4);
+
+  print_queue(&queue);
+
+  return 0;
+}
+```
